@@ -83,6 +83,11 @@ p {
     color: #ffffff;
 }
 
+.embed-responsive {
+    display: grid;
+    
+}
+
 /*Codigo para el Calendario*/
 
 .navbar-brand {
@@ -176,9 +181,6 @@ a {
     footer {
         font-size: 12px;
 }
-.acercadenostros {
-        font-size: 12px;
-}
 
 }
 
@@ -187,9 +189,6 @@ a {
         font-size: 8px;
 }
     footer {
-    font-size: 6px;
-}
-.acercadenostros {
     font-size: 6px;
 }
 }
