@@ -8,7 +8,7 @@
 body {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #31384a;
+    /*background-color: #31384a;*/
 }
 
 .navbar {
@@ -85,7 +85,6 @@ p {
 
 .embed-responsive {
     display: grid;
-    
 }
 
 /*Codigo para el Calendario*/
@@ -121,6 +120,7 @@ footer {
     width: 100%;
     height: 17%;
     border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     color: #ffffff;
     padding-top: 5px #343434;
     background-color: #343f4b;
@@ -142,33 +142,40 @@ a {
 
 /*Menu Contacto*/
     form {
-        padding: 10px 100px;
-        background-color: #219F94;
+        margin-top: 10px;
+        background-color: #31384a;
     }
 
     #emailHelp {
         color: #ffffff;
     }
     .btn-primary {
-        background-color: #5a6978;
+        background-color: #31384a;
         border-color: #ffffff;
     }
     .btn-primary:hover {
-        background-color: #343f4b;
+        background-color: #31384a;
         border-color: #ffffff;
+    }
+
+    .grid-contenedor{
+        display: grid; /*inicio grid en el contenedor padre*/
+        grid-template-columns: 450px 450px; /*creo 3 columnas de 300px de ancho*/
+        justify-content: center; /*muevo la grilla creada al centro de la pantalla*/
+        gap: 15px; /*le marco a la grilla que este cada modulo separado por 15px de ancho*/
+        justify-items: center; /*hago que el contenido de cada modulo tenga su contenido centrado*/
+        background-color: #31384a;
+        
     }
 
 /*Menu Acerca de Nosotros*/
 
 .acercadenostros {
-    font-size: 18px;
-    background-color: #219F94;
+    font-size: 14px;
     max-width: 100%;
     display: grid;
     row-gap:unset;
     text-align: center;
-    padding: 30px 30px 20px 20px;
-    border-top: 2px solid #ffffff;
 }
 
 /*Media Queries para tablet */
@@ -182,13 +189,24 @@ a {
         font-size: 12px;
 }
 
+    .grid-contenedor {
+        grid-template-columns: 350px 350px; /*creo 3 columnas de 300px de ancho*/
+        font-size: 12px;
+        padding-top: 10px ;
+}
+    
+    img {  
+    height: 200px; width: 300px;
+}
 }
 
-@media screen and (max-width:480px) {
-    .container {
-        font-size: 8px;
-}
-    footer {
-    font-size: 6px;
-}
+    @media screen and (max-width:420px){
+        .grid-contenedor{
+            grid-template-columns: 200px 200px; /*cambio a que solo haya 1 columna*/
+        }
+
+        img {  
+            height: 200px; width: 200px;
+            }
+
 }
